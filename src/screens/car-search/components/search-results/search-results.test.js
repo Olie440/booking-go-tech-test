@@ -44,6 +44,19 @@ describe('<SearchResults />', () => {
         expect(component).toMatchSnapshot();
     });
 
+    it('renders no results found correctly', () => {
+        component.setProps({
+            results: {
+                state: 'Success',
+                data: [
+                    { name: 'No results found' }
+                ]
+            }
+        });
+
+        expect(component.find('.search-results__results')).toMatchSnapshot();
+    });
+
     it('updates the state when input is changed', () => {
         component.find('.search-results__input').simulate('change', {
             target: {

@@ -15,6 +15,19 @@ exports[`<SearchResults /> renders just the input when results.state === None 1`
 </div>
 `;
 
+exports[`<SearchResults /> renders no results found correctly 1`] = `
+<div
+  className="search-results__results"
+>
+  <div
+    className="search-results__result search-results__result--no-results"
+    key="No results found"
+  >
+    No results found
+  </div>
+</div>
+`;
+
 exports[`<SearchResults /> renders the input and loading spinner when results.state === Loading 1`] = `
 <div
   className="search-results"

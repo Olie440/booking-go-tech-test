@@ -56,7 +56,7 @@ export class SearchResults extends Component {
 
     doSearch = debounce((term) => {
         this.props.carSearch(term, 6);
-    }, 500);
+    }, 300);
 }
 
 const placeTypes = {
@@ -67,6 +67,14 @@ const placeTypes = {
 }
 
 function ResultRow({ placeType, bookingId, name, iata, city, region, country}) {
+    if (name === 'No results found') {
+        return (
+            <div className="search-results__result search-results__result--no-results" key={name}>
+                {name}
+            </div>
+        );
+    }
+
     return (
         <div className="search-results__result" key={bookingId}>
             <span className={`search-results__result-type ${placeType}`}>
