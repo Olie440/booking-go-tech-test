@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    font-family: "Ubuntu", "Open Sans", "Segoe UI", "Tahoma", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #444;
+}
+
+.background--blue {
+    background-color: #0a6eb9;
+}
+
+.background--yellow {
+    background-color: #f3ce56;
+}
+
+.screen {
+    min-height: 100vh;
+    min-width: 100vw;
+    position: absolute;
+}

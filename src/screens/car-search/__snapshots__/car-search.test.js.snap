@@ -2,31 +2,24 @@
 
 exports[`renders without crashing 1`] = `
 <div
-  className="App"
+  className="car-search screen background--blue"
 >
-  <header
-    className="App-header"
+  <div
+    className="car-search__search-container background--yellow"
   >
-    <img
-      alt="logo"
-      className="App-logo"
-      src="logo.svg"
-    />
-    <p>
-      Edit 
-      <code>
-        src/App.js
-      </code>
-       and save to reload.
-    </p>
-    <a
-      className="App-link"
-      href="https://reactjs.org"
-      rel="noopener noreferrer"
-      target="_blank"
+    <h2
+      className="car-search__header"
     >
-      Learn React
-    </a>
-  </header>
+      Let’s find your ideal car
+    </h2>
+    <label
+      className="car-search__label"
+    >
+      Pick-up Location
+    </label>
+    <input
+      className="car-search__input"
+    />
+  </div>
 </div>
 `;

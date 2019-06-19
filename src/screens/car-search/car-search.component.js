@@ -1,31 +1,14 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import logo from '../../assets/images/logo.svg';
-import './hotel-search.css';
+import './car-search.style.css';
 
-export function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function CarSearchScreen() {
+    return (
+        <div className="car-search screen background--blue">
+            <div className="car-search__search-container background--yellow">
+                <h2 className="car-search__header" >Let’s find your ideal car</h2>
+                <label className="car-search__label">Pick-up Location</label>
+                <input className="car-search__input"  />
+            </div>
+        </div>
+    );
 }
-
-export function mapStateToProps(state) {
-  return state;
-}
-
-export default connect(mapStateToProps)(App);

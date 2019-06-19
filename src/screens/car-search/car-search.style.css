@@ -1,0 +1,36 @@
+.car-search__search-container {
+    display: block;
+    width: 35rem;
+    margin: 7.5rem auto 0 auto;
+    padding: 1rem;
+}
+
+.car-search__header {
+    margin-bottom: 1rem;
+}
+
+.car-search__label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+}
+
+.car-search__input {
+    display: block;
+    border: 1px solid #b4b4b4;
+    border-radius: 4px;
+    padding: 8px 16px;
+}
+
+.car-search__input:focus {
+    border-color: #0f6193;
+    outline: 0;
+}
+
+@media (max-width: 756px) {
+    .car-search__search-container {
+        display: block;
+        width: 100%;
+        margin: 7.5rem auto 0 auto;
+    }
+}
