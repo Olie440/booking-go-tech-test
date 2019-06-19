@@ -1,7 +1,13 @@
-import { DATA_REQUESTED, DATA_RECEIVED, DATA_REQUEST_FAILED } from '../consts';
+import { DATA_REQUESTED, DATA_RECEIVED, DATA_REQUEST_FAILED, DATA_CLEARED } from '../consts';
 
 export default function carSearch(term = '', rows = 6) {
     return async function (dispatch) {
+        if (!term || term.length < 2) {
+            return {
+                type: DATA_CLEARED
+            };
+        }
+
         dispatch({
             type: DATA_REQUESTED
         });

@@ -1,7 +1,7 @@
 import MockFetch from '../../../../__mocks__/mock-fetch';
 import mockResults from '../../../../__mocks__/mock-results';
 
-import { DATA_REQUESTED, DATA_RECEIVED, DATA_REQUEST_FAILED } from '../../consts';
+import { DATA_REQUESTED, DATA_RECEIVED, DATA_REQUEST_FAILED, DATA_CLEARED } from '../../consts';
 import carSearch from '../car-search.js';
 
 describe('carSearch Action', () => {
@@ -14,28 +14,36 @@ describe('carSearch Action', () => {
 
     afterEach(() => {
         mockFetch.unmock();
-    })
+    });
+
+    it(`returns a ${DATA_CLEARED} action when search term is invalid`, async () => {
+        const result = await carSearch(null)(mockDispatch);
+        expect(result).toEqual({
+            type: DATA_CLEARED
+        });
+    });
+
+    it(`returns a ${DATA_CLEARED} action when search term length is under 2`, async () => {
+        const result = await carSearch(null)(mockDispatch);
+        expect(result).toEqual({
+            type: DATA_CLEARED
+        });
+    });
 
     it(`dispatches a ${DATA_REQUESTED} action`, async () => {
-        await carSearch()(mockDispatch);
+        await carSearch('test')(mockDispatch);
         expect(mockDispatch).toHaveBeenCalledWith({
             type: DATA_REQUESTED
         });
     });
 
-    it('it requests the data from correct url', async () => {
-        await carSearch()(mockDispatch);
-        expect(fetch).toHaveBeenCalledWith('https://cors.io/?https://www.rentalcars.com/FTSAutocomplete.do?solrIndex=fts_en&solrRows=6&solrTerm=');
-    });
-
-
     it('interpolates the term and amount of rows', async () => {
-        await carSearch('test', 10)(mockDispatch);
-        expect(fetch).toHaveBeenCalledWith('https://cors.io/?https://www.rentalcars.com/FTSAutocomplete.do?solrIndex=fts_en&solrRows=10&solrTerm=test');
+        await carSearch('test1234', 10)(mockDispatch);
+        expect(fetch).toHaveBeenCalledWith('https://cors.io/?https://www.rentalcars.com/FTSAutocomplete.do?solrIndex=fts_en&solrRows=10&solrTerm=test1234');
     });
 
     it(`dispatches a ${DATA_REQUEST_FAILED} when fetch returns an error`, async () => {
-        await carSearch()(mockDispatch);
+        await carSearch('test')(mockDispatch);
 
         expect(mockDispatch).toHaveBeenCalledWith({
             type: DATA_REQUEST_FAILED
@@ -51,9 +59,9 @@ describe('carSearch Action', () => {
             }
         }
 
-        mockFetch.mockRequest('https://cors.io/?https://www.rentalcars.com/FTSAutocomplete.do?solrIndex=fts_en&solrRows=6&solrTerm=', expectedData);
+        mockFetch.mockRequest('https://cors.io/?https://www.rentalcars.com/FTSAutocomplete.do?solrIndex=fts_en&solrRows=6&solrTerm=test', expectedData);
 
-        await carSearch()(mockDispatch);
+        await carSearch('test')(mockDispatch);
         expect(mockDispatch).toHaveBeenCalledWith({
             type: DATA_RECEIVED,
             payload: mockResults()
