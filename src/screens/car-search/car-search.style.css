@@ -2,11 +2,11 @@
     display: block;
     width: 35rem;
     margin: 7.5rem auto 0 auto;
-    padding: 1.5rem;
+    padding: 1.75rem 1.5rem;
 }
 
 .car-search__header {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .car-search__label {
