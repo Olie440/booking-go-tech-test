@@ -24,7 +24,7 @@ describe('carSearch Action', () => {
     });
 
     it(`dispatches a ${DATA_CLEARED} action when search term length is under 2`, async () => {
-        await carSearch(null)(mockDispatch);
+        await carSearch('   5')(mockDispatch);
         expect(mockDispatch).toHaveBeenCalledWith({
             type: DATA_CLEARED
         });
