@@ -7,7 +7,9 @@ export default function CarSearchScreen() {
             <div className="car-search__search-container background--yellow">
                 <h2 className="car-search__header" >Let’s find your ideal car</h2>
                 <label className="car-search__label">Pick-up Location</label>
-                <input className="car-search__input"  />
+                <input
+                    className="car-search__input"
+                    placeholder="city, airport, station, region and district..."  />
             </div>
         </div>
     );

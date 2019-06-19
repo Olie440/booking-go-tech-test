@@ -2,7 +2,7 @@
     display: block;
     width: 35rem;
     margin: 7.5rem auto 0 auto;
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 .car-search__header {
@@ -16,10 +16,13 @@
 }
 
 .car-search__input {
-    display: block;
+    display: inline-block;
     border: 1px solid #b4b4b4;
     border-radius: 4px;
     padding: 8px 16px;
+    font-size: 16px;
+    line-height: 1.5;
+    width: 100%;
 }
 
 .car-search__input:focus {
@@ -27,10 +30,14 @@
     outline: 0;
 }
 
+.car-search__input::placeholder {
+    font-size: 14px;
+}
+
 @media (max-width: 756px) {
     .car-search__search-container {
         display: block;
-        width: 100%;
-        margin: 7.5rem auto 0 auto;
+        width: calc(100% - 2rem);
+        margin: 1rem;
     }
 }

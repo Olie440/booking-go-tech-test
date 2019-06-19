@@ -19,6 +19,7 @@ exports[`renders without crashing 1`] = `
     </label>
     <input
       className="car-search__input"
+      placeholder="city, airport, station, region and district..."
     />
   </div>
 </div>
