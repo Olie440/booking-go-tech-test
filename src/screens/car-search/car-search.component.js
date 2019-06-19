@@ -12,6 +12,7 @@ export default function CarSearchScreen() {
                     Pick-up Location
                 </label>
                 <input
+                    aria-label="city, airport, station, region and district..."
                     id="car-search__search"
                     className="car-search__input"
                     placeholder="city, airport, station, region and district..."  />
