@@ -16,16 +16,16 @@ describe('carSearch Action', () => {
         mockFetch.unmock();
     });
 
-    it(`returns a ${DATA_CLEARED} action when search term is invalid`, async () => {
-        const result = await carSearch(null)(mockDispatch);
-        expect(result).toEqual({
+    it(`dispatches a ${DATA_CLEARED} action when search term is invalid`, async () => {
+        await carSearch(null)(mockDispatch);
+        expect(mockDispatch).toHaveBeenCalledWith({
             type: DATA_CLEARED
         });
     });
 
-    it(`returns a ${DATA_CLEARED} action when search term length is under 2`, async () => {
-        const result = await carSearch(null)(mockDispatch);
-        expect(result).toEqual({
+    it(`dispatches a ${DATA_CLEARED} action when search term length is under 2`, async () => {
+        await carSearch(null)(mockDispatch);
+        expect(mockDispatch).toHaveBeenCalledWith({
             type: DATA_CLEARED
         });
     });

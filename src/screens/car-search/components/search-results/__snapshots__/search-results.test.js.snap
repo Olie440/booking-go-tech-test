@@ -1,0 +1,261 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchResults /> renders just the input when results.state === None 1`] = `
+<div
+  className="search-results"
+>
+  <input
+    aria-label="city, airport, station, region and district..."
+    className="search-results__input"
+    id="search-results"
+    onChange={[Function]}
+    placeholder="city, airport, station, region and district..."
+    value=""
+  />
+</div>
+`;
+
+exports[`<SearchResults /> renders the input and loading spinner when results.state === Loading 1`] = `
+<div
+  className="search-results"
+>
+  <input
+    aria-label="city, airport, station, region and district..."
+    className="search-results__input"
+    id="search-results"
+    onChange={[Function]}
+    placeholder="city, airport, station, region and district..."
+    value=""
+  />
+  <div
+    className="search-results__loading-spinner"
+  >
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      fixedWidth={false}
+      flip={null}
+      icon={
+        Object {
+          "icon": Array [
+            512,
+            512,
+            Array [],
+            "f110",
+            "M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z",
+          ],
+          "iconName": "spinner",
+          "prefix": "fas",
+        }
+      }
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size="lg"
+      spin={true}
+      symbol={false}
+      title=""
+      transform={null}
+    />
+  </div>
+</div>
+`;
+
+exports[`<SearchResults /> renders the input and results when results.state === Success 1`] = `
+<div
+  className="search-results"
+>
+  <input
+    aria-label="city, airport, station, region and district..."
+    className="search-results__input"
+    id="search-results"
+    onChange={[Function]}
+    placeholder="city, airport, station, region and district..."
+    value=""
+  />
+  <div
+    className="search-results__results"
+  >
+    <div
+      className="search-results__result"
+      key="airport-38566"
+    >
+      <span
+        className="search-results__result-type A"
+      >
+        Airport
+      </span>
+      <div
+        className="search-results__result-cell"
+      >
+        <span
+          className="search-results__result-name"
+        >
+          Manchester Airport
+           
+          (MAN)
+        </span>
+        <span
+          className="search-results__result-location"
+        >
+          Manchester
+          , 
+          United Kingdom
+        </span>
+      </div>
+    </div>
+    <div
+      className="search-results__result"
+      key="city-2623580"
+    >
+      <span
+        className="search-results__result-type C"
+      >
+        City
+      </span>
+      <div
+        className="search-results__result-cell"
+      >
+        <span
+          className="search-results__result-name"
+        >
+          Manchester
+           
+        </span>
+        <span
+          className="search-results__result-location"
+        >
+          Greater Manchester
+          , 
+          United Kingdom
+        </span>
+      </div>
+    </div>
+    <div
+      className="search-results__result"
+      key="district-929"
+    >
+      <span
+        className="search-results__result-type D"
+      >
+        District
+      </span>
+      <div
+        className="search-results__result-cell"
+      >
+        <span
+          className="search-results__result-name"
+        >
+          Manhattan
+           
+        </span>
+        <span
+          className="search-results__result-location"
+        >
+          New York State
+          , 
+          United States of America
+        </span>
+      </div>
+    </div>
+    <div
+      className="search-results__result"
+      key="airport-26411"
+    >
+      <span
+        className="search-results__result-type A"
+      >
+        Airport
+      </span>
+      <div
+        className="search-results__result-cell"
+      >
+        <span
+          className="search-results__result-name"
+        >
+          Managua Airport
+           
+          (MGA)
+        </span>
+        <span
+          className="search-results__result-location"
+        >
+          Managua
+          , 
+          Nicaragua
+        </span>
+      </div>
+    </div>
+    <div
+      className="search-results__result"
+      key="airport-79938"
+    >
+      <span
+        className="search-results__result-type A"
+      >
+        Airport
+      </span>
+      <div
+        className="search-results__result-cell"
+      >
+        <span
+          className="search-results__result-name"
+        >
+          Manila International Airport
+           
+          (MNL)
+        </span>
+        <span
+          className="search-results__result-location"
+        >
+          Luzon
+          , 
+          Philippines
+        </span>
+      </div>
+    </div>
+    <div
+      className="search-results__result"
+      key="airport-23646"
+    >
+      <span
+        className="search-results__result-type A"
+      >
+        Airport
+      </span>
+      <div
+        className="search-results__result-cell"
+      >
+        <span
+          className="search-results__result-name"
+        >
+          Norman Manley International Airport
+           
+          (KIN)
+        </span>
+        <span
+          className="search-results__result-location"
+        >
+          Kingston
+          , 
+          Jamaica
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<SearchResults /> updates the state when input is changed 1`] = `
+<input
+  aria-label="city, airport, station, region and district..."
+  className="search-results__input"
+  id="search-results"
+  onChange={[Function]}
+  placeholder="city, airport, station, region and district..."
+  value="aa"
+/>
+`;

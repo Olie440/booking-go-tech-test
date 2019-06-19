@@ -2,10 +2,10 @@ import { DATA_REQUESTED, DATA_RECEIVED, DATA_REQUEST_FAILED, DATA_CLEARED } from
 
 export default function carSearch(term = '', rows = 6) {
     return async function (dispatch) {
-        if (!term || term.length < 2) {
-            return {
+        if (typeof term !== 'string' || term.trim().length < 2) {
+            return dispatch({
                 type: DATA_CLEARED
-            };
+            });
         }
 
         dispatch({

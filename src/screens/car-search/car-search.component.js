@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchResults from './components/search-results/search-results.component';
 import './car-search.style.css';
 
 export default function CarSearchScreen() {
@@ -11,11 +12,7 @@ export default function CarSearchScreen() {
                 <label className="car-search__label" htmlFor="car-search__search">
                     Pick-up Location
                 </label>
-                <input
-                    aria-label="city, airport, station, region and district..."
-                    id="car-search__search"
-                    className="car-search__input"
-                    placeholder="city, airport, station, region and district..."  />
+                <SearchResults />
             </div>
         </div>
     );
